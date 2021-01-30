@@ -12,11 +12,60 @@
 
   gtag('config', 'G-XRKFCHMVWV');
 </script>
+<script>
+
+    var Body = {
+        setColor : function(color){
+            document.querySelector('body').style.color=color;
+        },
+        setBackgroundColor : function(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+    }
+
+    var Links= {
+        setColor : function(color){
+            var alist = document.querySelectorAll('a');
+            var i =0;
+            while(i <alist.length){
+                alist[i].style.color =color;
+                i=i+1;
+            }
+        }
+    }
+
+    function daynightHandler(self){
+        if (self.value === 'night'){
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+            self.value = 'day';
+
+            var alist = document.querySelectorAll('a');
+            var i =0;
+            Links.setColor('powderblue');
+
+          }else{
+            Body.setBackgroundColor('white');
+            Body.setColor('black');
+            self.value='night';
+
+            Links.setColor('blue');
+        }
+        
+    }
+
+
+</script>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1><a href="index.html">Bucket list</a></h1>
+
+    <input id ='night_day' type='button' value='night' onclick="
+        daynightHandler(this);
+    ">
+
     <ol>
         <li><a href ="1.html">디지니랜드</a></li>
         <li><a href= "2.html">레이스981</a></li>
@@ -34,9 +83,9 @@
     <p>
         <div id="disqus_thread"></div>
         <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
             /*
             var disqus_config = function () {
             this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
