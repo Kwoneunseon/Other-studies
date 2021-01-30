@@ -23,6 +23,17 @@
         }
     }
 
+    var Links= {
+        setColor : function(color){
+            var alist = document.querySelectorAll('a');
+            var i =0;
+            while(i <alist.length){
+                alist[i].style.color =color;
+                i=i+1;
+            }
+        }
+    }
+
     function daynightHandler(self){
         if (self.value === 'night'){
             Body.setBackgroundColor('black');
@@ -31,23 +42,16 @@
 
             var alist = document.querySelectorAll('a');
             var i =0;
-            while(i <alist.length){
-                alist[i].style.color ='powderblue';
-                i=i+1;
-            }
+            Links.setColor('powderblue');
 
           }else{
             Body.setBackgroundColor('white');
             Body.setColor('black');
             self.value='night';
 
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i<alist.length){
-                alist[i].style.color='blue';
-                i = i+1;
-            }
+            Links.setColor('blue');
         }
+        
     }
 
 
