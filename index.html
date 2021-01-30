@@ -12,18 +12,13 @@
 
   gtag('config', 'G-XRKFCHMVWV');
 </script>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <h1><a href="index.html">Bucket list</a></h1>
-
-    <input id ='night_day' type='button' value='night' onclick="
+<script>
+    function daynightHandler(self){
         var target = document.querySelector('body');
-        if (this.value === 'night'){
+        if (self.value === 'night'){
             target.style.background ='black';
             target.style.color='white';
-            this.value = 'day';
+            self.value = 'day';
 
             var alist = document.querySelectorAll('a');
             var i =0;
@@ -35,15 +30,27 @@
           }else{
             target.style.background='white';
             target.style.color='black';
-            this.value='night';
+            self.value='night';
 
-            var alist = doucument.querySelectorAll('a');
+            var alist = document.querySelectorAll('a');
             var i = 0;
             while(i<alist.length){
                 alist[i].style.color='blue';
                 i = i+1;
             }
         }
+    }
+
+
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1><a href="index.html">Bucket list</a></h1>
+
+    <input id ='night_day' type='button' value='night' onclick="
+        daynightHandler(this);
     ">
 
     <ol>
