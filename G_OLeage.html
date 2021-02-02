@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Crescent_Hobby</title>
+        <meta charset='utf-8'>
+        <style>
+         h1 {
+            font-size: 60px;
+            color: black;
+            text-align: center;
+            margin-bottom : 0;
+        }
+        .index {
+            text-align: center;
+            display:grid;
+            grid-template-columns: auto auto auto auto;
+            margin-top : 25px ;
+            padding-left:0px;
+        }
+        .index li{
+            list-style-type : none;
+            border : 2px solid black;
+            padding : 10px;
+            font-size:20px;
+        }
+        .menu{
+            display :grid;
+            grid-template-columns: 220px 1fr;
+        }
+        #bucket_list{
+            padding-left: 30px;
+            padding-right: 30px;
+            border-right: 2px solid gray;
+        }
+        #contents{
+            padding-left : 20px;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        #image_grid{
+            display:grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+        .hero{
+            padding : 10px;
+        }
+        .sub_menu{
+            padding-left: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <h3><a href= "index.html"><img src="./image/Crescent.jpg" width="25px" height="25px">Crescent</a></h3>
+        <h1><a href ="B_disney.html" >Hobby</a></h1>
+        <ul class ="index">
+            <li><a href ="B_disney.html" >Bucket list</a> </li>
+            <li><a href="G_OLeage.html">Game</a></li>
+            <li>Youtube</li>
+            <li>Makeup</li>
+        </ul>
+        <div class='menu'>
+            <ul id='bucket_list'>
+                <li><a href ="B_disney.html" >Ovewatch</a></li>
+                <ul class= 'sub_menu'>
+                    <li>재미있었던 경기</li>
+                    <li>팀</li>
+                </ul>
+                <li>배그</li>
+            </ul>
+            <div id='contents'>
+                <h2>OverWatch</h2>
+                <p>
+                    오버워치는  블리자드 엔터테인먼트가 개발 및 배급한 팀 기반의 1인칭 슈팅 게임이다.
+                </p> 
+                <p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ygA74Taxtm8" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+                <h3>오버워치 영웅들</h3>
+                <br><br>
+                <div id="image_grid">
+                    <img class='hero' src="./image/ow_hero/dva.png" height="250x">
+                    <img  class='hero' src="./image/ow_hero/겐지.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/자리야.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/라인하르트.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/아나.png" height="250px">
+                </div>
+                <div id='image_grid'>
+                    <img class='hero' src="./image/ow_hero/맥크리.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/브리기테.png" height="250px">                    
+                    <img class='hero' src="./image/ow_hero/위도우메이커.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/둠피스트.png" height="250px">
+                    <img class='hero' src="./image/ow_hero/에코.png" height="250px">
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
